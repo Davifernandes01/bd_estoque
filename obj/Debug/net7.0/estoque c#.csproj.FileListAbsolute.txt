@@ -1,0 +1,14 @@
+C:\Users\davif\Desktop\estoque c#\bin\Debug\net7.0\estoque c#.exe
+C:\Users\davif\Desktop\estoque c#\bin\Debug\net7.0\estoque c#.deps.json
+C:\Users\davif\Desktop\estoque c#\bin\Debug\net7.0\estoque c#.runtimeconfig.json
+C:\Users\davif\Desktop\estoque c#\bin\Debug\net7.0\estoque c#.dll
+C:\Users\davif\Desktop\estoque c#\bin\Debug\net7.0\estoque c#.pdb
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.AssemblyInfoInputs.cache
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.AssemblyInfo.cs
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.csproj.CoreCompileInputs.cache
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.dll
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\refint\estoque c#.dll
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.pdb
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\estoque c#.genruntimeconfig.cache
+C:\Users\davif\Desktop\estoque c#\obj\Debug\net7.0\ref\estoque c#.dll

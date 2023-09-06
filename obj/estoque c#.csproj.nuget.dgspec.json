@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj": {}
+    "C:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj": {}
   },
   "projects": {
-    "c:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj": {
+    "C:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj",
+        "projectUniqueName": "C:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj",
         "projectName": "estoque c#",
-        "projectPath": "c:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj",
+        "projectPath": "C:\\Users\\davif\\Desktop\\estoque c#\\estoque c#.csproj",
         "packagesPath": "C:\\Users\\davif\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\davif\\Desktop\\estoque c#\\obj\\",
+        "outputPath": "C:\\Users\\davif\\Desktop\\estoque c#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\davif\\AppData\\Roaming\\NuGet\\NuGet.Config",
