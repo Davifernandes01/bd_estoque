@@ -1,8 +1,8 @@
 
-using System.Security.Cryptography;
+
 namespace Product 
 {
-    class Product {
+    class product {
 
         public int id { get;  private set;}
         public string name { get ; private set;}
@@ -11,7 +11,7 @@ namespace Product
         public  DateTime last_Delivery_date { get; private set;} //data de entrada
         public DateTime last_Departure_date {get; private set;}// data de saida
 
-        public Product(int id, string name, string description, int amount, 
+        public product(int id, string name, string description, int amount, 
         DateTime last_Delivery_date)
         {
             this.id = id;
@@ -36,13 +36,9 @@ namespace Product
 
         public int isDecreaseAmount(int amount){ //metado para diminuir a quantidade de produto
 
-            if(amount > 0){
+           
 
-                quantity-= amount;
-                
-            }
-
-                return quantity;    
+                return  quantity-= amount;  
         }
 
         public string UpdateDescription(string update){ // metado para atualizar a descricao
@@ -70,6 +66,7 @@ namespace Product
 
         public DateTime get_last_Departure_date( DateTime date){//metado para setar a data de saida
 
+            
             return last_Departure_date = date;
         }
 
