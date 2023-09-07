@@ -7,7 +7,7 @@ namespace Product
         public int id { get;  private set;}
         public string name { get ; private set;}
         public string description { get; private set;}  
-        public int amount { get; private set;} 
+        public int quantity { get; private set;} //quantidade
         public  DateTime last_Delivery_date { get; private set;} //data de entrada
         public DateTime last_Departure_date {get; private set;}// data de saida
 
@@ -17,7 +17,7 @@ namespace Product
             this.id = id;
             this.name = name;
             this.description = description;
-            this.amount = amount;
+            quantity = amount;
             this.last_Delivery_date = last_Delivery_date;
           
             
@@ -27,22 +27,22 @@ namespace Product
         public int isIncreaseAmount(int amount){ //metado para aumentar a quantidade do produto
             if(amount > 0){
 
-                this.amount += amount;
+                quantity += amount;
                 
             }
 
-            return this.amount;
+            return quantity;
         }
 
         public int isDecreaseAmount(int amount){ //metado para diminuir a quantidade de produto
 
             if(amount > 0){
 
-                this.amount -= amount;
+                quantity-= amount;
                 
             }
 
-                return this.amount;    
+                return quantity;    
         }
 
         public string UpdateDescription(string update){ // metado para atualizar a descricao
@@ -79,7 +79,7 @@ namespace Product
         {
             return string.Format
             ("Produto [id: {0}], [nome: {1}], [descriçaõ: {2}], [quantidade: {3}], [data de entrada: {4}], [data de saida: {5}] ",
-            id, name,description, amount, last_Delivery_date, last_Departure_date);
+            id, name,description, quantity, last_Delivery_date, last_Departure_date);
         }
 
 
