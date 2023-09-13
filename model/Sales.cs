@@ -12,31 +12,54 @@ namespace Sales{
 
         public sales(int id, product product, int quantity, decimal Total_Amount, DateTime dateOfSales) {
 
+                if(id == 0){
+                    throw new ArgumentException("id invalido");
+                }
+
+                if(product == null){
+                    throw new ArgumentException("produto não encontrado");
+                }
+                if (Total_Amount == 0){
+                    throw new ArgumentException("valor invalido");
+                }
+
                 this.id = id;
                 this.product = product;
+
+            
                 if(quantity < product.quantity){
                     
                     product.isDecreaseAmount(quantity);//dimuindo a quantidade de produtos
                     this.quantity = quantity;
+                }else{
+                    throw new ArgumentException("erro na venda, quantidade invalida");
                 }
+               
+               
                 
                 this.Total_Amount = Total_Amount;
 
                 this.dateOfSales = dateOfSales;
                 product.get_last_Departure_date(dateOfSales); // passando a data de venda da classe sales, para
                 //a classe products
+
+                
         }
 
             public void UpdateQuantity(int amount){
 
-                    if(amount >= product.quantity){
-                        quantity = amount;
-                        product.isDecreaseAmount(amount);
+                    if(amount < product.quantity){
+                        throw new ArgumentException("valor maior que a quantidade disponivel");
                     }
+                quantity = amount;
+                 product.isDecreaseAmount(amount);
             }
 
             public void UpdateAmount(decimal money){
 
+                if(money == 0){
+                    throw new ArgumentException("valor não pode ser igual a zero");
+                }
                 Total_Amount =  money;
             }
 

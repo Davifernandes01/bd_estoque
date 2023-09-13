@@ -6,9 +6,13 @@ using Product;
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("antes da venda: ");
-           var p1 = new product(1,"tv", "tv 23polegada", 4,DateTime.Now);
-            Console.WriteLine(p1);
+           
+
+        try
+        {
+           Console.WriteLine("antes da venda: ");
+           var p1 = new product(1,"tv", "tv 23polegada", 1,DateTime.Now);
+           Console.WriteLine(p1);
            var v1 = new sales(1,p1,3,7000.00m,DateTime.Now.AddDays(3));
            Console.WriteLine("------------------");
            Console.WriteLine("depois da venda: ");
@@ -19,7 +23,12 @@ using Product;
            Console.WriteLine("depois da atualização: ");
            Console.WriteLine(p1);
 
-
+        }
+        catch (Exception ex)
+        {
+                 Console.WriteLine($"{ex.Message}");
+        }
+        
            
         }
     }

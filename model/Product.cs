@@ -14,29 +14,51 @@ namespace Product
         public product(int id, string name, string description, int amount, 
         DateTime last_Delivery_date)
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            quantity = amount;
-            this.last_Delivery_date = last_Delivery_date;
+
+            if(id == 0){
+                throw new ArgumentException("id invalido");
+            }   
+
+            if (string.IsNullOrWhiteSpace(name)){
+                 throw new ArgumentException("nome invalido ou vazio");
+            }
+               
+            
+
+            if(string.IsNullOrWhiteSpace(description)){
+                throw new ArgumentException("descrição invalida ou vazio");
+            }
+                
+         
+            if(amount == 0 ){
+
+                throw new ArgumentException("quantidade invalido");
+            }
+             this.id = id;
+             this.name = name;
+             this.description = description;
+             quantity = amount;              
+             this.last_Delivery_date = last_Delivery_date;    
           
             
         }
 
 
         public int isIncreaseAmount(int amount){ //metado para aumentar a quantidade do produto
-            if(amount > 0){
+            if(amount <= 0){
 
-                quantity += amount;
+               throw new ArgumentException("valor menor ou igual a zero!!");
                 
             }
-
-            return quantity;
+            return quantity += amount;
+          
         }
 
         public int isDecreaseAmount(int amount){ //metado para diminuir a quantidade de produto
 
-           
+           if(amount > quantity){
+                throw new ArgumentException("valor não pode ser maior que a quantidade atual");
+           }
 
                 return  quantity-= amount;  
         }
@@ -45,7 +67,7 @@ namespace Product
 
             if (string.IsNullOrWhiteSpace(update)){
 
-               return "";
+               throw new ArgumentException("descrição não pode ser vazio!!");
                 
             }
 
@@ -57,7 +79,7 @@ namespace Product
             if(string.IsNullOrWhiteSpace(name)){
                 
                 
-                return "";
+                throw new ArgumentException("nome não poder ser vazio");
              
             }
 
