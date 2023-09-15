@@ -3,7 +3,7 @@ namespace Product
 {
     class product {
 
-       // public int id { get;  private set;}
+       public int id { get;  private set;}
         public string name { get ; private set;}
         public string description { get; private set;}  
         public int quantity { get; private set;} //quantidade

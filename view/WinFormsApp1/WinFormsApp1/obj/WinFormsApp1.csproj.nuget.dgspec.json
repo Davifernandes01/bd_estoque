@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "c:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "c:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "c:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "c:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\davif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "c:\\Users\\davif\\Desktop\\estoque c#\\view\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\davif\\AppData\\Roaming\\NuGet\\NuGet.Config",
