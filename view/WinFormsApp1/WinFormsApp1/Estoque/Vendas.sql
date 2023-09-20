@@ -2,13 +2,15 @@ create table Vendas(
   id int not null PRIMARY key IDENTITY,
   id_produto int not null,
   quantidade int not null,
-  valor_Total money not null,
+  valor_Total decimal(10,2) not null,
   data_venda DATETIME
 
 --CONSTRAINT chk_quantidade CHECK(quantidade >= 0)
 CONSTRAINT fk_id_produto FOREIGN key (id_produto) REFERENCES Produtos(id)
 )
 
+alter table Vendas
+add valor_total decimal(10,2)
 --criação do index
 create NONCLUSTERED INDEX idx_id_vendas
 on Vendas (id)
@@ -49,3 +51,5 @@ as
 SELECT v.data_venda,v.valor_Total,p.nome, v.quantidade
 from Vendas v
 inner join Produtos p on p.id = v.id_produto
+
+

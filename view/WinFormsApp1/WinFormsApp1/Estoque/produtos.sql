@@ -1,17 +1,23 @@
-create database Estoque
+
 
 create table Produtos(
   id int not null primary key IDENTITY,
   nome varchar(30) not null,
   descricao text not null,
   quantidade int not null,
-  preco_unit int not null,
+  preco_unit decimal(10,2) not null,
   ultima_data_entrada datetime not null,
   ultima_data_saida dateTime,
 
 --CONSTRAINTS para evitar que o numero de quantidade seja menor que 0
  CONSTRAINT cnk_quantidade check ( quantidade >= 0)
 )
+
+select * from Produtos;
+select * from hist_Entrada;
+
+insert into Produtos(nome, descricao, quantidade, ultima_data_entrada, ultima_data_saida,preco_unit)
+values ('tv 32', 'tv top',33,GETDATE(),GETDATE(), 70.00)
 --criação dos index
 create  NONCLUSTERED INDEX idx_Produto_id
 on Produtos (id)

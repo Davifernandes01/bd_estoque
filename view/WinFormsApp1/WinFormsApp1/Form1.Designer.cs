@@ -159,6 +159,7 @@
             label_nome.Size = new Size(40, 15);
             label_nome.TabIndex = 0;
             label_nome.Text = "Nome";
+            label_nome.Click += label_nome_Click;
             // 
             // button_lista_produtos
             // 

@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            Column_nome = new DataGridViewTextBoxColumn();
-            Column_descrição = new DataGridViewTextBoxColumn();
-            Column_quantidade = new DataGridViewTextBoxColumn();
-            Column_preco_unit = new DataGridViewTextBoxColumn();
-            Column1_data_entrada = new DataGridViewTextBoxColumn();
-            Column1_data_saida = new DataGridViewTextBoxColumn();
             label_nome = new Label();
             label2_desc = new Label();
             label_quant = new Label();
@@ -50,48 +43,10 @@
             button1_atualizar = new Button();
             button_deletar = new Button();
             button_sair = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            list_produtos = new ListView();
+            label1 = new Label();
+            button_listar = new Button();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_nome, Column_descrição, Column_quantidade, Column_preco_unit, Column1_data_entrada, Column1_data_saida });
-            dataGridView1.Location = new Point(245, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(643, 484);
-            dataGridView1.TabIndex = 0;
-            // 
-            // Column_nome
-            // 
-            Column_nome.HeaderText = "Nome";
-            Column_nome.Name = "Column_nome";
-            // 
-            // Column_descrição
-            // 
-            Column_descrição.HeaderText = "Descrição";
-            Column_descrição.Name = "Column_descrição";
-            // 
-            // Column_quantidade
-            // 
-            Column_quantidade.HeaderText = "Quantidade";
-            Column_quantidade.Name = "Column_quantidade";
-            // 
-            // Column_preco_unit
-            // 
-            Column_preco_unit.HeaderText = "Preço_Unitario";
-            Column_preco_unit.Name = "Column_preco_unit";
-            // 
-            // Column1_data_entrada
-            // 
-            Column1_data_entrada.HeaderText = "Data_Entrada";
-            Column1_data_entrada.Name = "Column1_data_entrada";
-            // 
-            // Column1_data_saida
-            // 
-            Column1_data_saida.HeaderText = "Data_Saida";
-            Column1_data_saida.Name = "Column1_data_saida";
             // 
             // label_nome
             // 
@@ -217,11 +172,41 @@
             button_sair.UseVisualStyleBackColor = true;
             button_sair.Click += button_sair_Click;
             // 
+            // list_produtos
+            // 
+            list_produtos.Location = new Point(257, 75);
+            list_produtos.Name = "list_produtos";
+            list_produtos.Size = new Size(631, 334);
+            list_produtos.TabIndex = 16;
+            list_produtos.UseCompatibleStateImageBehavior = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(39, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 15);
+            label1.TabIndex = 17;
+            label1.Text = "Lista de produtos";
+            // 
+            // button_listar
+            // 
+            button_listar.Location = new Point(804, 35);
+            button_listar.Name = "button_listar";
+            button_listar.Size = new Size(75, 23);
+            button_listar.TabIndex = 18;
+            button_listar.Text = "buscar";
+            button_listar.UseVisualStyleBackColor = true;
+            button_listar.Click += button_listar_Click;
+            // 
             // FormLiSTAProdutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(900, 550);
+            Controls.Add(button_listar);
+            Controls.Add(label1);
+            Controls.Add(list_produtos);
             Controls.Add(button_sair);
             Controls.Add(button_deletar);
             Controls.Add(button1_atualizar);
@@ -237,23 +222,13 @@
             Controls.Add(label_quant);
             Controls.Add(label2_desc);
             Controls.Add(label_nome);
-            Controls.Add(dataGridView1);
             Name = "FormLiSTAProdutos";
             Text = "Lista de produtos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column_nome;
-        private DataGridViewTextBoxColumn Column_descrição;
-        private DataGridViewTextBoxColumn Column_quantidade;
-        private DataGridViewTextBoxColumn Column_preco_unit;
-        private DataGridViewTextBoxColumn Column1_data_entrada;
-        private DataGridViewTextBoxColumn Column1_data_saida;
         private Label label_nome;
         private Label label2_desc;
         private Label label_quant;
@@ -269,5 +244,8 @@
         private Button button1_atualizar;
         private Button button_deletar;
         private Button button_sair;
+        private ListView list_produtos;
+        private Label label1;
+        private Button button_listar;
     }
 }
