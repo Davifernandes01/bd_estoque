@@ -4,17 +4,14 @@ namespace Sales{
 
     class sales {
 
-        public int id {get ; private set;}
+      
         public product product{get; private set;}
         public int quantity{get; private set;} 
         public decimal Total_Amount{get; private set;} 
         public DateTime dateOfSales{get; private set;}
 
-        public sales(int id, product product, int quantity, decimal Total_Amount, DateTime dateOfSales) {
+        public sales( product product, int quantity, decimal Total_Amount, DateTime dateOfSales) {
 
-                if(id == 0){
-                    throw new ArgumentException("id invalido");
-                }
 
                 if(product == null){
                     throw new ArgumentException("produto não encontrado");
@@ -23,7 +20,7 @@ namespace Sales{
                     throw new ArgumentException("valor invalido");
                 }
 
-                this.id = id;
+               
                 this.product = product;
 
             

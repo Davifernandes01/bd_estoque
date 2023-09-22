@@ -13,7 +13,7 @@ create table Produtos(
  CONSTRAINT cnk_quantidade check ( quantidade >= 0)
 )
 
-select * from Produtos;
+select nome from Produtos;
 select * from hist_Entrada;
 
 insert into Produtos(nome, descricao, quantidade, ultima_data_entrada, ultima_data_saida,preco_unit)

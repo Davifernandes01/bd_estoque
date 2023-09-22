@@ -108,7 +108,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"erro ao receber dados, {ex.Message}");
+                DialogResult result = MessageBox.Show(ex.Message, "Lista de produtos", MessageBoxButtons.OK);
             }
             finally
             {

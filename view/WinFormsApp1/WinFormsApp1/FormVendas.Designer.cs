@@ -30,16 +30,16 @@
         {
             components = new System.ComponentModel.Container();
             groupBox1 = new GroupBox();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            comboBox_vendas = new ComboBox();
             button_voltar = new Button();
             button_vendas = new Button();
             monthCalendar1 = new MonthCalendar();
             dateTime_vendas = new DateTimePicker();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label_date = new Label();
             label_valor = new Label();
-            label_quantidade = new Label();
             label_produto = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             groupBox1.SuspendLayout();
@@ -47,16 +47,16 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(comboBox_vendas);
             groupBox1.Controls.Add(button_voltar);
             groupBox1.Controls.Add(button_vendas);
             groupBox1.Controls.Add(monthCalendar1);
             groupBox1.Controls.Add(dateTime_vendas);
             groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label_date);
             groupBox1.Controls.Add(label_valor);
-            groupBox1.Controls.Add(label_quantidade);
             groupBox1.Controls.Add(label_produto);
             groupBox1.Location = new Point(26, 28);
             groupBox1.Name = "groupBox1";
@@ -64,6 +64,31 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Vendas dos produtos";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(151, 112);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 120);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 15);
+            label1.TabIndex = 12;
+            label1.Text = "Quantidade a vender";
+            // 
+            // comboBox_vendas
+            // 
+            comboBox_vendas.FormattingEnabled = true;
+            comboBox_vendas.Location = new Point(151, 74);
+            comboBox_vendas.Name = "comboBox_vendas";
+            comboBox_vendas.Size = new Size(121, 23);
+            comboBox_vendas.TabIndex = 11;
+            comboBox_vendas.SelectedIndexChanged += comboBox_vendas_SelectedIndexChanged;
             // 
             // button_voltar
             // 
@@ -83,6 +108,7 @@
             button_vendas.TabIndex = 9;
             button_vendas.Text = "Vender";
             button_vendas.UseVisualStyleBackColor = true;
+            button_vendas.Click += button_vendas_Click;
             // 
             // monthCalendar1
             // 
@@ -92,31 +118,17 @@
             // 
             // dateTime_vendas
             // 
-            dateTime_vendas.Location = new Point(94, 191);
+            dateTime_vendas.Location = new Point(151, 190);
             dateTime_vendas.Name = "dateTime_vendas";
             dateTime_vendas.Size = new Size(200, 23);
             dateTime_vendas.TabIndex = 7;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(94, 152);
+            textBox3.Location = new Point(151, 154);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(94, 112);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(94, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 4;
             // 
             // label_date
             // 
@@ -136,15 +148,6 @@
             label_valor.TabIndex = 2;
             label_valor.Text = "Valor";
             // 
-            // label_quantidade
-            // 
-            label_quantidade.AutoSize = true;
-            label_quantidade.Location = new Point(19, 120);
-            label_quantidade.Name = "label_quantidade";
-            label_quantidade.Size = new Size(69, 15);
-            label_quantidade.TabIndex = 1;
-            label_quantidade.Text = "Quantidade";
-            // 
             // label_produto
             // 
             label_produto.AutoSize = true;
@@ -163,6 +166,7 @@
             Name = "FormVendas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque - Retirada";
+            Load += FormVendas_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -173,15 +177,15 @@
         private GroupBox groupBox1;
         private Label label_date;
         private Label label_valor;
-        private Label label_quantidade;
         private Label label_produto;
         private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private Button button_voltar;
         private Button button_vendas;
         private MonthCalendar monthCalendar1;
         private DateTimePicker dateTime_vendas;
         private System.Windows.Forms.Timer timer1;
+        private ComboBox comboBox_vendas;
+        private TextBox textBox1;
+        private Label label1;
     }
 }

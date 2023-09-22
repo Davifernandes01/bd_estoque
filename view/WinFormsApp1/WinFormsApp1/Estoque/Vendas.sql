@@ -1,13 +1,20 @@
 create table Vendas(
-  id int not null PRIMARY key IDENTITY,
-  id_produto int not null,
+  id int not null PRIMARY key IDENTITY, 
   quantidade int not null,
   valor_Total decimal(10,2) not null,
   data_venda DATETIME
 
---CONSTRAINT chk_quantidade CHECK(quantidade >= 0)
-CONSTRAINT fk_id_produto FOREIGN key (id_produto) REFERENCES Produtos(id)
+
 )
+
+
+
+
+alter table vendas
+add nome_produto varchar(50) not null
+
+alter table Vendas
+add constraint fk_nome_produtos foreign key (nome_produto) references Produtos(nome)
 
 alter table Vendas
 add valor_total decimal(10,2)
@@ -44,6 +51,9 @@ FOR INSERT
                 where id = @produtoID
             
 end   
+
+go
+
 
 go
 create VIEW vendasProdutos
