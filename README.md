@@ -42,3 +42,7 @@ que a quantidade que está no estoque, depois de conferida, ela substrai a quant
   de entrada atualizado', utilizei tbm o CHECK para não ter produtos com quantidade negativa e etc</p>
 
   <p>falta algumas coisas, como relatorios ,consultas e etc, mas aos poucos vou fazendo isso</p>
+
+
+  <h1>Parte grafica</h1>
+  <p> fiz a parte grafica em winfoems, parte grafica esta completa. falta apenas alguns detalhes, como  poder fazer a venda e etc, coisas como cadastrar produtos e mostrar a lista de produtos , esta completa</p>
